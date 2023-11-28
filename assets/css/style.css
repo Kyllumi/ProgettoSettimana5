@@ -251,7 +251,6 @@ main section .articleContent h3 {
 main section .article span {
   color: #718397;
   font-size: 0.9em;
-  margin-top: 0.7em;
 }
 
 main section .article span.highlight {
@@ -264,6 +263,7 @@ main section .article .articleFooter {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 1em;
 }
 
 main section .article .articleFooter img {
@@ -325,17 +325,8 @@ aside ul li {
   transition: background-color 300ms linear;
 }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 /* SEZIONE MEDIA QUERY */
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 577px) and (max-width: 992px) {
   body {
     font-size: 80%;
   }
@@ -367,7 +358,7 @@ aside ul li {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 576px) {
   nav ul li:nth-child(1),
   nav ul li:nth-child(2),
   nav ul li:nth-child(3) {
@@ -421,7 +412,7 @@ aside ul li {
     margin-bottom: 2em;
   }
   aside a {
-    font-size: 65%;
+    font-size: 90%;
   }
   main {
     align-items: center;
@@ -455,4 +446,13 @@ aside ul li {
 
 g.random {
   opacity: 0;
+  animation: fadeIn 1s ease-in infinite alternate;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
